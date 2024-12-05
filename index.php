@@ -53,17 +53,24 @@ function TaVie($nom = "Mazino", $prenom = "Urek", $age = 200){
 
 // Exo 7
 
+
+
 function GenreAge($AgeType = 19, $Genre = "Homme"){
+$result = "";
+$Genre = strtoupper($Genre);
+
     if ($Genre == "Homme") {
-    echo "Vous êtes un homme";
+    $result .= "Vous êtes un homme";
 } else {
-    echo "Vous êtes une femme";
+    $result .= "Vous êtes une femme";
 }
 if ($AgeType > 18) {
-    echo " et vous êtes majeur";
+    $result .= " et vous êtes majeur";
 } else {
-    echo " et vous êtes mineur";
+    $result .= " et vous êtes mineur";
 }
+
+return $result;
 }
 
 
@@ -159,7 +166,7 @@ function additioner($NOne = 5, $NTwo = 10, $NThree = 15){
         </h2>
         <p>
             <?php 
-            GenreAge(16, "Femme");
+            echo GenreAge(16, "Femme");
             
             ?>
         </p>
